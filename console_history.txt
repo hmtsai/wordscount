@@ -1,0 +1,60 @@
+
+in git bash, steps for push local git repos to GitHub 
+
+see ref web site
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
+
+============================================
+Below are the hisotry in git bash console
+===========================================
+
+hmt@hm MINGW64 /d/python_test
+$ mkdir wordscount
+
+hmt@hm MINGW64 /d/python_test
+$ cp wordscount.py wordscount/
+
+hmt@hm MINGW64 /d/python_test
+$ cp Eve_Diary_by_Mark_Twain.txt wordscount/
+
+hmt@hm MINGW64 /d/python_test
+$ cd wordscount
+
+hmt@hm MINGW64 /d/python_test/wordscount
+$ ls
+Eve_Diary_by_Mark_Twain.txt  wordscount.py
+
+hmt@hm MINGW64 /d/python_test/wordscount
+$ git init
+Initialized empty Git repository in D:/python_test/wordscount/.git/
+
+hmt@hm MINGW64 /d/python_test/wordscount (master)
+$ git add .
+
+hmt@hm MINGW64 /d/python_test/wordscount (master)
+$ git commit -m 'First commit: add python code and text file'
+[master (root-commit) 012fb70] First commit: add python code and text file
+ 2 files changed, 198 insertions(+)
+  create mode 100644 Eve_Diary_by_Mark_Twain.txt
+   create mode 100644 wordscount.py
+
+   hmt@hm MINGW64 /d/python_test/wordscount (master)
+   $ git remote add origin https://github.com/hmtsai/wordscount.git
+
+   hmt@hm MINGW64 /d/python_test/wordscount (master)
+   $ git remote -v
+   origin  https://github.com/hmtsai/wordscount.git (fetch)
+   origin  https://github.com/hmtsai/wordscount.git (push)
+
+   hmt@hm MINGW64 /d/python_test/wordscount (master)
+   $ git push origin master
+   Counting objects: 4, done.
+   Delta compression using up to 4 threads.
+   Compressing objects: 100% (4/4), done.
+   Writing objects: 100% (4/4), 13.86 KiB | 0 bytes/s, done.
+   Total 4 (delta 0), reused 0 (delta 0)
+   To https://github.com/hmtsai/wordscount.git
+    * [new branch]      master -> master
+
+
